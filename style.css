@@ -1,0 +1,345 @@
+body {
+    line-height: 1.6; /* without metric, multiplier of current font size */
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header, main, footer (1fr is 1 fraction) */
+    grid-template-areas: "header" "main" "footer";   /* to define grid areas (for mobile) */
+    overflow: hidden; /* prevent scrolling on desktop */
+    min-height: 100vh;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: crosshair;
+}
+
+
+
+@media (max-width: 768px) { /*MOBILE SETTINGS for width < 768px */
+    header,
+    footer {
+        flex-direction: column; /* stack header elements vertically */
+        text-align: center;
+    }
+
+    main {
+        background-image: none !important;
+        flex-wrap: wrap;
+        max-width: 100% !important;
+        justify-content: center;
+        overflow: scroll;
+    }
+
+    form {
+        background-image: none !important;
+        flex-wrap: wrap;
+        min-width: 100% !important;
+        max-height: 100vh;
+        justify-content: center;
+    }
+
+    author {
+        display: none !important;
+    }
+    
+
+    h3 { 
+        font-size: 100% !important; 
+    }
+
+    nav:hover,
+    #home-button:hover,
+    #show-contact-form:hover,
+    .icon:hover,
+    #submit:hover {
+        background-color: transparent !important; /* makes it so hover is clear on mobile */
+    }
+
+    .logo {
+        padding: none !important;
+        text-align: center !important; /* center logo for mobile */
+    }
+
+    .icon {
+        padding: 0 0 20px 0;
+    }
+
+} /*end @media block for mobile */
+
+
+
+/*---------------------------------------------------------------------*/
+/*starts the header section */
+header {
+    background-color: #ffffff;
+    border: none;
+    align-items: center; /* centers items vertically in section */
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; /* space between divs */
+    grid-area: header; /* define the grid area (for mobile) */
+}
+
+nav { /*navigation links in header*/
+    text-align: right;
+    text-transform: lowercase;
+    font-weight: bold;
+    padding: 10px 20px 0 0; /* top right bottom left */
+    grid-area: nav; /* define the grid area (for mobile) */
+    cursor: crosshair;
+    color: #000000;
+}
+
+.nav:hover {
+    background-color: #000000; 
+}
+
+#home-button, 
+#show-contact-form {  /* links&buttons in nav */
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    color: #000000;
+    cursor: crosshair;
+}
+
+#toggle-colors {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: crosshair;
+}
+
+#home-button:hover,
+#show-contact-form:hover {
+    background-color: #000000;
+}
+
+
+.logo {  /* logo top left in heading */
+    padding: 0px 0px 0px 30px;
+    max-width: 400px;
+    text-align: left;
+}
+/*-----------------------------------------------------------------------*/
+
+
+a { /*general all links */
+    color: #000000;
+    text-decoration: none;
+    padding-inline: 5px;
+    cursor: crosshair;
+}
+
+#cvButton:hover {
+    background-color: #000000;
+}
+
+body.invert-colors #cvButton {
+    color: #ffffff; /* these are here because the invert-colors wasn't working on links */
+    background-color: transparent; 
+}
+
+body.invert-colors #cvButton:hover { /* these are here because the invert-colors wasn't working on links */
+    background-color: #ffffff; 
+}
+
+h3 { /* about me & jasmine is my life titles / section titles */
+    font-style: bold;
+    font-size: 230%; 
+    margin: 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 { /*logo top left & page titles */
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4cqw;
+    margin: 4px;
+}
+
+p { /*general all paragraphs */
+    font-size: 0.7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------------------------------------------------------*/
+
+/*starts the about me row aka main section*/
+main {
+    background: url("beethatidrew-curser.png") no-repeat; 
+    background-color: #ffffff;
+    background-size: 100px; /* changes size of the bee */
+    background-position: center; /* changes position of the bee */
+    grid-area: main; /* define the grid area */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* centers items vertically in section */
+}
+
+#column1 {  /*two divs in the main */
+    max-width: 550px;
+    text-align: left;
+    padding: 5px 60px; /*top&bottom right bottom left*/
+    background-color: transparent;
+    grid-area: column1;
+}
+
+#column2 {
+    background-color: transparent;
+    grid-area: column2;
+    max-width: 550px;
+    text-align: left;
+    padding: 5px 30px; /*top&bottom right bottom left*/
+}
+
+.headshot {
+    width: 300px;
+    border-radius: 40px;
+}
+
+.adventcalendar {
+	height: 100px;
+    width: 300px;
+	margin: 0;
+    padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	justify-content: center;
+	background-color: transparent;
+}
+
+#column3 {
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+#present1,
+#present2,
+#present3,
+#present4,
+#present5,
+#present6,
+#present7,
+#present8,
+#present9,
+#present10 {
+	font-size: 2rem;
+	margin: auto;
+}
+
+
+/* ---------------------------------------------------------------*/
+/*starts the footer section */
+footer {
+    font-size: 0.9em;
+    background-color: #ffffff;
+    align-items: center; /* centers items vertically in section */
+    grid-area: footer; /* define the grid area (for mobile) */
+    display: flex;
+    justify-content: right;
+    padding: 10px 20px 0 20px;
+    flex-wrap: wrap;
+}
+
+author {
+    padding: 0 20px 0 0;
+}
+
+.icon:hover {
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+/*---------------------------------------------------------------------*/
+/* invert colors css from the js & preventing inverts*/
+.invert-colors {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+.invert-colors img { /* prevents img element from inverting */
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors a { /*prevents social icons from inverting */
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present1 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present2 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present3 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present4 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present5 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present6 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present7 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present8 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present9 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors #present10 {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+.invert-colors .holidays {
+    filter: invert(2) hue-rotate(180deg) !important;
+}
+
+
+/*two objects below are for transition js of the about & traits sections*/
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* slightly moves down */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* slowly transition */
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* resets to original position */
+}
+
+
+/*---------------------------------------------------------*/
+/*starts contact form css */
+
+#contact-form {
+    padding-left: 5%;
+    min-width: 100vw;
+}
+
+#submit,
+#message,
+#email,
+#name {
+    border: 1px solid #ff0099;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+#submit:hover {
+    background-color: #000000;
+}
+

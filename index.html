@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="english">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--need for mobile @media css-->
+        <title> &#9734;Molly </title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+
+<!------------------------------------------------------------------->
+        <header>
+            <div class="logo">
+                <h2>&#9734;<b>MOLLY</b><i>MILKHONEY</i></h2>
+            </div> 
+            <nav> 
+                <button id="toggle-colors">☽</button>
+                <button id="home-button">home</button>
+                <a href="index2.html" target="_blank" id="cvButton">CV</a>
+                <button id="show-contact-form">contact</button>
+            </nav>
+
+        </header>
+<!------------------------------------------------------------------->
+        <main>
+            
+                <div id="column1">
+                    <div class="text-content1 hidden">
+                        <h3>(✿◠‿◠) about me</h3>
+                        <p> currently: studying software engineering<br>
+
+                        </p>
+                        <p> interests: developing websites, 
+                            desktop & mobile applications, medical technology devices, 
+                            wearable tech, cloud-based integrations, & quality management systems
+                        </p>
+                    </div> <!--ends text-content1-->
+                    <div class="text-content2 hidden">
+                        <h3>(▲・ᴥ・▲) jasmine is my life</h3>
+                        <p> she's my 10 year old chihuahua<br>
+                            she looks like a bat<br>
+                            she's blind as a bat
+                        </p>
+                    </div> <!--ends text-content2-->
+                </div> <!--ends column1-->
+                
+                <div id="column2">
+                 <img src="headshot.jpg" class="headshot">
+                </div>
+
+                <div id="column3">
+                    <h3 class="holidays" style="color:#06402B">Happy Holidays!</h3>
+                    <div class="adventcalendar">
+                        <span id="present1">🎁</span>
+                        <span id="present2">🎁</span>
+                        <span id="present3">🎁</span>
+                        <span id="present4">🎁</span>
+                        <span id="present5">🎁</span>
+                        <span id="present6">🎁</span>
+                        <span id="present7">🎁</span>
+                        <span id="present8">🎁</span>
+                        <span id="present9">🎁</span>
+                        <span id="present10">🎁</span>
+                    </div>
+                    <h3 style="font-size: small; text-align: center;">*click to reveal presents*</h3>
+                </div>
+
+                <form id="contact-form" style="display: none;" action="send-email.php" method="POST">  <!--contact form hidden until clicked-->
+                        <h3>get in touch</h3>
+                        <label for="name">name:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="email">email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="message">message:</label><br>
+                        <textarea id="message" name="message" rows="5" required></textarea><br>
+                
+                        <!-- radio Buttons -->
+                        <label for="inquiry type">inquiry type:</label>
+                        <input type="radio" id="employment" name="inquiry type" value="employment">
+                        <label for="employment">employment</label>
+                        <input type="radio" id="freelance" name="inquiry type" value="freelance">
+                        <label for="freelance">freelance</label>
+                        <input type="radio" id="other" name="inquiry type" value="other">
+                        <label for="other">other</label><br>
+
+                        <!-- checkbox -->
+                        <input type="checkbox" id="subscribe" name="subscribe" value="resumeupdate">
+                        <label for="subscribe">get my resume updates?</label><br><br>
+
+                        <button type="submit" id="submit">send it</button>
+                </form>
+                
+
+        </main>                 
+<!------------------------------------------------------------------->
+
+        <footer>
+                <author>
+                    © &#9734;<b>MOLLY</b><i>MILKHONEY</i> december 2024</i>
+                </author>
+                <div class="socials">
+                    <a href="https://github.com/mollymilkhoney" target="_blank" aria-label="GitHub">
+                        <img src="githubicon.png" width="25px" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://instagram.com/mollymilkhoney" target="_blank" aria-label="Instagram">
+                        <img src="instagramicon.png" width="25" alt="Instagram" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/mollymilkhoney/" target="_blank" aria-label="LinkedIn">
+                        <img src="linkedinicon.png" width="25px" alt="LinkedIn" class="icon">
+                    </a>
+                    <a href="https://tiktok.com/@mollymilkhoney" target="_blank" aria-label="TikTok">
+                        <img src="tiktokicon.png" width="25" alt="TikTok" class="icon">
+                    </a>
+                    <a href="https://youtube.com/c/mollymilkhoney" target="_blank" aria-label="YouTube">
+                        <img src="youtubeicon.png" width="25px" alt="YouTube" class="icon">
+                    </a>
+                    <a href="https://codepen.io/mollymilkhoney" target="_blank" aria-label="Codepen">
+                        <img src="codepenicon.png" width="25px" alt="Codepen" class="icon">
+                    </a>
+                </div> <!--end socials contact-->
+        </footer>
+    <script src="script.js"></script> <!--load javascript-->   
+    </body>
+</html>
